@@ -83,11 +83,20 @@ async function syncOrcid() {
       }
     }
     
+    const slug = (title.toString().toLowerCase().trim()
+      .replace(/\s+/g, '-')
+      .replace(/[^\w\-]+/g, '')
+      .replace(/\-\-+/g, '-')
+      .replace(/^-+/, '')
+      .replace(/-+$/, '') || 'publication') + '-' + putCode
+
     try {
       await payload.create({
         collection: 'publications',
+        draft: false,
         data: {
           title,
+          slug,
           type: type as any,
           journalTitle,
           year,
@@ -95,7 +104,6 @@ async function syncOrcid() {
           url,
           orcidPutCode: putCode,
           authors: 'Amir Shmuel', // Default author based on profile
-          _status: 'published',
         },
       })
       added++
