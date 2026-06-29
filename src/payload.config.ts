@@ -62,7 +62,9 @@ export default buildConfig({
     pool: {
       connectionString: process.env.DATABASE_URL,
     },
-    push: true,
+    // Drizzle push only runs when NODE_ENV !== 'production'. The build script
+    // runs src/scripts/push-schema.ts in development mode to sync schema on Vercel.
+    push: process.env.NODE_ENV !== 'production',
   }),
   collections: [Pages, Posts, Publications, Media, Categories, Users],
   cors: [getServerSideURL()].filter(Boolean),
