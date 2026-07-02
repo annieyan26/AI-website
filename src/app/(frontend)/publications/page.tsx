@@ -33,7 +33,8 @@ export default async function PublicationsPage() {
         <div className="prose dark:prose-invert max-w-none">
           <h1>Publications</h1>
           <p className="text-xl text-muted-foreground">
-            A comprehensive list of academic papers, journal articles, and preprints.
+            Selected publications from the Lab of Visual Systems Neuroscience and Brain Imaging Signals,
+            led by Dr. Amir Shmuel at The Neuro, McGill University.
           </p>
         </div>
       </div>
@@ -91,6 +92,6 @@ export default async function PublicationsPage() {
 
 export function generateMetadata(): Metadata {
   return {
-    title: `Publications | Payload Website Template`,
+    title: 'Publications',
   }
 }

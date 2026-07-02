@@ -202,7 +202,7 @@ export const seed = async ({
 
   payload.logger.info(`— Seeding pages...`)
 
-  const [_, contactPage] = await Promise.all([
+  await Promise.all([
     payload.create({
       collection: 'pages',
       depth: 0,
@@ -225,8 +225,15 @@ export const seed = async ({
           {
             link: {
               type: 'custom',
-              label: 'Posts',
-              url: '/posts',
+              label: 'Home',
+              url: '/',
+            },
+          },
+          {
+            link: {
+              type: 'custom',
+              label: 'Research',
+              url: '/research',
             },
           },
           {
@@ -238,12 +245,9 @@ export const seed = async ({
           },
           {
             link: {
-              type: 'reference',
+              type: 'custom',
               label: 'Contact',
-              reference: {
-                relationTo: 'pages',
-                value: contactPage.id,
-              },
+              url: '/contact',
             },
           },
         ],
@@ -256,24 +260,25 @@ export const seed = async ({
           {
             link: {
               type: 'custom',
-              label: 'Admin',
-              url: '/admin',
+              label: 'The Neuro',
+              newTab: true,
+              url: 'https://www.mcgill.ca/neuro/',
             },
           },
           {
             link: {
               type: 'custom',
-              label: 'Source Code',
+              label: 'McGill BIC',
               newTab: true,
-              url: 'https://github.com/payloadcms/payload/tree/3.x/templates/website',
+              url: 'https://www.mcgill.ca/bic/',
             },
           },
           {
             link: {
               type: 'custom',
-              label: 'Payload',
+              label: 'GitHub',
               newTab: true,
-              url: 'https://payloadcms.com/',
+              url: 'https://github.com/annieyan26/AI-website',
             },
           },
         ],

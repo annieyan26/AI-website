@@ -35,8 +35,8 @@ export const contactForm: RequiredDataFromCollectionSlug<'forms'> = {
   createdAt: '2023-01-12T21:47:41.374Z',
   emails: [
     {
-      emailFrom: '"Payload" \u003Cdemo@payloadcms.com\u003E',
-      emailTo: '{{email}}',
+      emailFrom: '"VSNBIS Lab" <amir.shmuel@mcgill.ca>',
+      emailTo: 'amir.shmuel@mcgill.ca',
       message: {
         root: {
           type: 'root',
@@ -67,7 +67,7 @@ export const contactForm: RequiredDataFromCollectionSlug<'forms'> = {
           version: 1,
         },
       },
-      subject: "You've received a new message.",
+      subject: 'New message from the VSNBIS Lab website',
     },
   ],
   fields: [

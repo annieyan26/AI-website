@@ -45,9 +45,14 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
 export const metadata: Metadata = {
   metadataBase: new URL(getServerSideURL()),
+  title: {
+    default: 'Lab of Visual Systems Neuroscience and Brain Imaging Signals',
+    template: '%s | VSNBIS Lab',
+  },
+  description:
+    'Research laboratory of Dr. Amir Shmuel at The Neuro, McGill University. We study visual systems neuroscience and the neuronal basis of brain imaging signals.',
   openGraph: mergeOpenGraph(),
   twitter: {
     card: 'summary_large_image',
-    creator: '@payloadcms',
   },
 }

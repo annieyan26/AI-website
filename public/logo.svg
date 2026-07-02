@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 48" fill="none" role="img" aria-label="VSNBIS Lab">
+  <defs>
+    <linearGradient id="brainGrad" x1="0" y1="0" x2="40" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0ea5e9"/>
+      <stop offset="1" stop-color="#6366f1"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(0, 2)">
+    <path d="M20 4C12 4 6 10 6 18C6 24 9 29 14 32C10 34 8 38 8 42H12C12 39 14 36 18 35C19 35 20 35 20 35C20 35 21 35 22 35C26 36 28 39 28 42H32C32 38 30 34 26 32C31 29 34 24 34 18C34 10 28 4 20 4Z" fill="url(#brainGrad)"/>
+    <path d="M12 18C12 14 15 11 20 11C25 11 28 14 28 18" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.9"/>
+    <path d="M10 22C14 20 18 24 20 24C22 24 26 20 30 22" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.75"/>
+    <path d="M4 26H8M32 26H36M6 32H10M30 32H34" stroke="#38bdf8" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+  <text x="48" y="20" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="13" font-weight="700" fill="currentColor">VSNBIS Lab</text>
+  <text x="48" y="36" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="9.5" fill="currentColor" opacity="0.75">Visual Systems Neuroscience &amp; Brain Imaging Signals</text>
+</svg>

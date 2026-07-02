@@ -1,4 +1,5 @@
 import type { RequiredDataFromCollectionSlug } from 'payload'
+import { LAB_NAME, SITE_DESCRIPTION } from '@/constants/lab'
 
 // Used for pre-seeded content so that the homepage is not empty
 export const homeStatic: RequiredDataFromCollectionSlug<'pages'> = {
@@ -19,7 +20,7 @@ export const homeStatic: RequiredDataFromCollectionSlug<'pages'> = {
                 format: 0,
                 mode: 'normal',
                 style: '',
-                text: 'Payload Website Template',
+                text: LAB_NAME,
                 version: 1,
               },
             ],
@@ -33,6 +34,15 @@ export const homeStatic: RequiredDataFromCollectionSlug<'pages'> = {
             type: 'paragraph',
             children: [
               {
+                type: 'text',
+                detail: 0,
+                format: 0,
+                mode: 'normal',
+                style: '',
+                text: 'Visit the ',
+                version: 1,
+              },
+              {
                 type: 'link',
                 children: [
                   {
@@ -41,7 +51,7 @@ export const homeStatic: RequiredDataFromCollectionSlug<'pages'> = {
                     format: 0,
                     mode: 'normal',
                     style: '',
-                    text: 'Visit the admin dashboard',
+                    text: 'admin dashboard',
                     version: 1,
                   },
                 ],
@@ -61,7 +71,7 @@ export const homeStatic: RequiredDataFromCollectionSlug<'pages'> = {
                 format: 0,
                 mode: 'normal',
                 style: '',
-                text: ' to make your account and seed content for your website.',
+                text: ' to manage site content, or explore Research, Publications, and Contact pages.',
                 version: 1,
               },
             ],
@@ -80,8 +90,8 @@ export const homeStatic: RequiredDataFromCollectionSlug<'pages'> = {
     },
   },
   meta: {
-    description: 'An open-source website built with Payload and Next.js.',
-    title: 'Payload Website Template',
+    description: SITE_DESCRIPTION,
+    title: LAB_NAME,
   },
   title: 'Home',
   layout: [],

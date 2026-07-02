@@ -33,6 +33,10 @@ const nextConfig: NextConfig = {
           protocol: url.protocol.replace(':', '') as 'http' | 'https',
         }
       }),
+      {
+        hostname: 'www.mcgill.ca',
+        protocol: 'https',
+      },
     ],
   },
   webpack: (webpackConfig) => {
